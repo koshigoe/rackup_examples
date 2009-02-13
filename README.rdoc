@@ -73,7 +73,7 @@ No samples. See official documentation.
 * Rack::Utils::HeaderHash
 * Rack::Utils::Multipart
 
-=== Middlewares (contlibutes)
+=== Middlewares (rack-contrib)
 
 Not supported yet.
 
