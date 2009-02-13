@@ -1,39 +1,37 @@
-h1. rackup examples
+= rackup examples
 
-h2. Target version of Rack
+== Target version of Rack
 
 * 0.9.1 (gem)
 * 0.1 (rackup command)
 
-h2. What is this?
+== What is this?
 
 Just write rackup examples.
 
-h3. Run rackup examples
+=== Run rackup examples
 
 Rackup examples are in the 'config/' directory.
 And some applications are in the 'app/' directory.
 
 e.g.
-<pre>
-[TERM:A] $ cd /path/to/this/clone/directory
-[TERM:A] $ rackup config/basic.ru
-</pre>
-<pre>
-[TERM:B] $ curl -v http://user:pass@localhost:9292/
-</pre>
 
-h2. Middlewares and Utilities (official)
+  [TERM:A] $ cd /path/to/this/clone/directory
+  [TERM:A] $ rackup config/basic.ru
+
+  [TERM:B] $ curl -v http://user:pass@localhost:9292/
+
+== Middlewares and Utilities (official)
 
 *NOTE: These category names are unofficial.*
 
-h3. Authentication
+=== Authentication
 
 * Rack::Auth::Basic
 * Rack::Auth::Digest
 * Rack::Auth::OpenID
 
-h3. Filter
+=== Filter
 
 * Rack::Cascade
 * Rack::ConditionalGet
@@ -44,19 +42,19 @@ h3. Filter
 * Rack::MethodOverride
 * Rack::Recursive
 
-h3. Serving static contents
+=== Serving static contents
 
 * Rack::Directory
 * Rack::File
 * Rack::Static
 
-h3. Session
+=== Session
 
 * Rack::Session::Cookie
 * Rack::Session::Memcache
 * Rack::Session::Pool
 
-h3. System
+=== System
 
 * Rack::CommonLogger
 * Rack::Lint
@@ -65,7 +63,7 @@ h3. System
 * Rack::ShowStatus
 * Rack::URLMap
 
-h3. Utilities (Not middleware)
+=== Utilities (Not middleware)
 
 No samples. See official documentation.
 
@@ -75,13 +73,13 @@ No samples. See official documentation.
 * Rack::Utils::HeaderHash
 * Rack::Utils::Multipart
 
-h2. Middlewares (contlibutes)
+=== Middlewares (contlibutes)
 
 Not supported yet.
 
-h2. References
+== References
 
-* http://rack.rubyforge.org/
-* http://rack.rubyforge.org/doc/
-* http://github.com/rack/rack/tree/master
-* http://github.com/rack/rack-contrib/tree/master
+Rack:: <http://rack.rubyforge.org/>
+Rack RDoc:: <http://rack.rubyforge.org/doc/>
+Rack on GitHub:: <http://github.com/rack/rack/tree/master>
+rack-contrib on GitHub:: <http://github.com/rack/rack-contrib/tree/master>
