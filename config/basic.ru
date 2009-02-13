@@ -1,5 +1,19 @@
-# not allow development environment (Rack::Lint::LintError)
-# use deployment environment.
+# = Rack::Auth::Basic
+#
+# Basic authentication, part 1.
+#
+# Protect whole requests, using basic authentication.
+#
+# see also: config/basic2.ru
+#
+# NOTE:
+#   Rack::Auth::Basic is NOT set 'Content-Type' header.
+#   When using 'development' environment,
+#   Rack::Lint will load automatically.
+
+require 'app/dump'
+
+use Rack::ShowStatus
 use Rack::Auth::Basic do |username, password|
   auth_db = {
     'user' => 'pass'
@@ -7,11 +21,4 @@ use Rack::Auth::Basic do |username, password|
   auth_db.has_key?(username) and password == auth_db[username]
 end
 
-run Proc.new { |env|
-  [
-    200,
-    {'Content-Type' => 'text/html; charset=UTF-8'},
-    [env.map { |key, value| Rack::Utils.escape_html("#{key}=#{value}")}.join("<br />\n")]
-  ]
-}
-
+run DumpApp.new

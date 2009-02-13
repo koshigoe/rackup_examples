@@ -1,3 +1,9 @@
+# = Rack::Recursive
+#
+# Call chain.
+#
+# Maybe, Rack::Recursive looks like to mod_rewrite.
+
 require 'app/obsoluted'
 require 'app/foo'
 

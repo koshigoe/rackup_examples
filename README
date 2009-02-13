@@ -1,1 +1,87 @@
-Rack のミドルウェアの使い方を、ruファイルに書いて整理しています。
+h1. rackup examples
+
+h2. Target version of Rack
+
+* 0.9.1 (gem)
+* 0.1 (rackup command)
+
+h2. What is this?
+
+Just write rackup examples.
+
+h3. Run rackup examples
+
+Rackup examples are in the 'config/' directory.
+And some applications are in the 'app/' directory.
+
+e.g.
+<pre>
+[TERM:A] $ cd /path/to/this/clone/directory
+[TERM:A] $ rackup config/basic.ru
+</pre>
+<pre>
+[TERM:B] $ curl -v http://user:pass@localhost:9292/
+</pre>
+
+h2. Middlewares and Utilities (official)
+
+*NOTE: These category names are unofficial.*
+
+h3. Authentication
+
+* Rack::Auth::Basic
+* Rack::Auth::Digest
+* Rack::Auth::OpenID
+
+h3. Filter
+
+* Rack::Cascade
+* Rack::ConditionalGet
+* Rack::ContentLength
+* Rack::Deflater
+* Rack::ForwardRequest
+* Rack::Head
+* Rack::MethodOverride
+* Rack::Recursive
+
+h3. Serving static contents
+
+* Rack::Directory
+* Rack::File
+* Rack::Static
+
+h3. Session
+
+* Rack::Session::Cookie
+* Rack::Session::Memcache
+* Rack::Session::Pool
+
+h3. System
+
+* Rack::CommonLogger
+* Rack::Lint
+* Rack::Reloader
+* Rack::ShowExceptions
+* Rack::ShowStatus
+* Rack::URLMap
+
+h3. Utilities (Not middleware)
+
+No samples. See official documentation.
+
+* Rack::Mime
+* Rack::Utils
+* Rack::Utils::Context
+* Rack::Utils::HeaderHash
+* Rack::Utils::Multipart
+
+h2. Middlewares (contlibutes)
+
+Not supported yet.
+
+h2. References
+
+* http://rack.rubyforge.org/
+* http://rack.rubyforge.org/doc/
+* http://github.com/rack/rack/tree/master
+* http://github.com/rack/rack-contrib/tree/master

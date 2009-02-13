@@ -1,3 +1,11 @@
+# = Rack::ShowStatus
+#
+# Replace empty response.
+#
+# NOTE:
+#   When 'rack.showstatus.detail' exists,
+#   response was replaced always if not empty.
+
 use Rack::ShowStatus
 
 run Proc.new { |env|

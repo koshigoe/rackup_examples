@@ -1,12 +1,20 @@
-# When environment is development, Rack::Lint is always used.
+# = Rack::Lint
+#
+# Validates applications.
+#
+# NOTE:
+#   When environment is 'development',
+#   Rack::Lint was loaded automatically.
+#
+# If application was invalid,
+# you will catch Rack::Lint::LintError.
+
 use Rack::Lint
 
-# must set Content-Type header.
-# raise Rack::Lint::LintError
 run Proc.new { |env|
   [
     200,
-    # {'Content-Type' => 'text/html; charset=UTF-8'},
+    # MUST be set some headers.
     {},
     [env.map { |key, value| Rack::Utils.escape_html("#{key}=#{value}")}.join("<br />\n")]
   ]

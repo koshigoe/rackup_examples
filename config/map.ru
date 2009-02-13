@@ -1,3 +1,7 @@
+# = Rack::URLMap
+#
+# Routing rules.
+
 require 'app/foo'
 require 'app/bar'
 

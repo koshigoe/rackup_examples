@@ -1,5 +1,13 @@
 class BarApp
   def call(env)
-    [200, {'Content-Type' => 'text/html; charset=UTF-8'}, [self.class.to_s]]
+    body = self.class.to_s
+    [
+      200,
+      {
+        'Content-Type' => 'text/html; charset=UTF-8',
+        'Content-Length' => body.length.to_s,
+      },
+      [body]
+    ]
   end
 end

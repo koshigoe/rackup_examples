@@ -1,1 +1,6 @@
-rackupの設定ファイル集。
+This file is used by examples.
+
+* Rack::Cascade
+* Rack::File
+* Rack::Directory
+* Rack::Static
