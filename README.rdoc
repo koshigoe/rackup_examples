@@ -21,6 +21,31 @@ e.g.
 
   [TERM:B] $ curl -v http://user:pass@localhost:9292/
 
+== setup rack-rack-contrib
+
+commit: 43a508f7bdf59c3d1aee2856d71f815ae2056cf1
+
+  $ git clone git://github.com/rack/rack-contrib.git
+  $ cd rack-contrib
+  $ (edit rack-contrib.gemspec)
+  $ git diff
+  diff --git a/rack-contrib.gemspec b/rack-contrib.gemspec
+  index 1ed83ba..ea38027 100644
+  --- a/rack-contrib.gemspec
+  +++ b/rack-contrib.gemspec
+  @@ -62,7 +62,7 @@ Gem::Specification.new do |s|
+   
+     s.has_rdoc = true
+     s.homepage = "http://github.com/rack/rack-contrib/"
+  -  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "rack-contrib", "--main", "README"]
+  +  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "rack-contrib", "--main", "README.rdoc"]
+     s.require_paths = %w[lib]
+     s.rubygems_version = '1.1.1'
+   end
+  $ sudo rake install
+
+*NOTE: Some middlewares are not included in gem.*
+
 == Middlewares and Utilities (official)
 
 *NOTE: These category names are unofficial.*
@@ -75,7 +100,28 @@ No samples. See official documentation.
 
 === Middlewares (rack-contrib)
 
-Not supported yet.
+*NOTE: These middlewares are listed at <http://github.com/rack/rack-contrib/tree/master>.*
+
+* Rack::Etag
+* Rack::JSONP
+* Rack::LighttpdScriptNameFix (no example)
+* Rack::Locale (no example)
+* Rack::MailExceptions
+* Rack::NestedParams
+* Rack::PostBodyContentTypeParser
+* Rack::ProcTitle
+* Rack::Profiler
+* Rack::Sendfile
+* Rack::Signals
+* Rack::TimeZone
+* Rack::Evil
+* Rack::Callbacks
+* Rack::Config
+* Rack::NotFound
+* Rack::CSSHTTPRequest (no example)
+* Rack::Deflect (no example)
+* Rack::ResponseCache (no example)
+* Rack::RelativeRedirect
 
 == References
 

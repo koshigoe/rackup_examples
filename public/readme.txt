@@ -4,3 +4,4 @@ This file is used by examples.
 * Rack::File
 * Rack::Directory
 * Rack::Static
+* Rack::NotFound (contrib)

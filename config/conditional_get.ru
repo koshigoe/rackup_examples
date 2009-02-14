@@ -2,6 +2,9 @@
 #
 # Conditional GET.
 #
+# I don't know how to remove Content-Type header,
+# when return 304 status code.
+#
 # e.g.
 #
 #   [1] $ rackup -E deployment config/conditional_get.ru
