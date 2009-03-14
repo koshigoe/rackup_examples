@@ -62,6 +62,7 @@ commit: 43a508f7bdf59c3d1aee2856d71f815ae2056cf1
 * Rack::Chunked
 * Rack::ConditionalGet
 * Rack::ContentLength
+* Rack::ContentType
 * Rack::Deflater
 * Rack::ForwardRequest
 * Rack::Head
