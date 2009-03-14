@@ -2,7 +2,7 @@
 
 == Target version of Rack
 
-* 0.9.1 (gem)
+* c81542e28aa715ca209186f5c58b96f373b44fcf (git)
 * 0.1 (rackup command)
 
 == What is this?
@@ -59,6 +59,7 @@ commit: 43a508f7bdf59c3d1aee2856d71f815ae2056cf1
 === Filter
 
 * Rack::Cascade
+* Rack::Chunked
 * Rack::ConditionalGet
 * Rack::ContentLength
 * Rack::Deflater
